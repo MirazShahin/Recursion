@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+#define FastIO                  \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);                   \
+  cout.tie(0);
+using namespace std;
+
+void recurse(int i,  int n) { 
+    if(i < 1) {
+        return;
+    } 
+    recurse(i - 1, n); // backtrack
+    cout << i << " "; 
+}
+void solve() {
+    /*
+       Date: 13 - 07 - 2024
+    */
+    int n;  cin >> n;
+    recurse(n, n);
+}
+int32_t main() {
+    FastIO;  
+    solve();
+    return 0;
+}
+ 
